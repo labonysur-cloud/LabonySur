@@ -21,6 +21,7 @@
 }
 
 body {
+    cursor: url('asset/cursor-default.png') 16 16, auto;
     background-color: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-body);
@@ -37,6 +38,12 @@ h4 {
     font-family: var(--font-heading);
     font-weight: 700;
     line-height: 1.2;
+}
+
+
+a,
+button {
+    cursor: url('asset/cursor-pointer.png') 2 2, pointer;
 }
 
 a {
@@ -180,7 +187,7 @@ a {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    cursor: pointer;
+    cursor: url('asset/cursor-pointer.png') 2 2, pointer;
 }
 
 .btn-primary {
@@ -848,7 +855,7 @@ a {
 
 .contact-form button {
     width: 100%;
-    cursor: pointer;
+    cursor: url('asset/cursor-pointer.png') 2 2, pointer;
 }
 
 @media (max-width: 900px) {
