@@ -57,4 +57,90 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // AI Assistant Logic
+    const petContainer = document.getElementById('ai-pet-container');
+    const chatWindow = document.getElementById('ai-chat-window');
+    const closeChatBtn = document.getElementById('close-chat');
+    const sendBtn = document.getElementById('send-btn');
+    const chatInput = document.getElementById('chat-input');
+    const chatMessages = document.getElementById('chat-messages');
+
+    let messagesContext = [];
+
+    if (petContainer && chatWindow) {
+        // Toggle chat window
+        petContainer.addEventListener('click', () => {
+            petContainer.classList.add('hidden');
+            chatWindow.classList.remove('hidden');
+        });
+
+        closeChatBtn.addEventListener('click', () => {
+            chatWindow.classList.add('hidden');
+            petContainer.classList.remove('hidden');
+        });
+
+        const appendMessage = (content, role) => {
+            const msgDiv = document.createElement('div');
+            msgDiv.classList.add('message', role === 'user' ? 'user-message' : 'ai-message');
+            msgDiv.textContent = content;
+            chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        };
+
+        const showTyping = () => {
+            const typingDiv = document.createElement('div');
+            typingDiv.classList.add('typing-indicator');
+            typingDiv.id = 'typing-indicator';
+            typingDiv.innerHTML = '<span></span><span></span><span></span>';
+            chatMessages.appendChild(typingDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        };
+
+        const hideTyping = () => {
+            const typingDiv = document.getElementById('typing-indicator');
+            if (typingDiv) typingDiv.remove();
+        };
+
+        const sendMessage = async () => {
+            const text = chatInput.value.trim();
+            if (!text) return;
+
+            // Add user message
+            appendMessage(text, 'user');
+            messagesContext.push({ role: 'user', content: text });
+            chatInput.value = '';
+
+            // Show typing indicator
+            showTyping();
+
+            try {
+                // Call our Vercel Serverless Function securely
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ messages: messagesContext })
+                });
+
+                if (!response.ok) throw new Error('Network response was not ok');
+                
+                const data = await response.json();
+                const aiResponse = data.choices[0].message.content;
+                
+                hideTyping();
+                appendMessage(aiResponse, 'assistant');
+                messagesContext.push({ role: 'assistant', content: aiResponse });
+                
+            } catch (error) {
+                console.error("Chat error:", error);
+                hideTyping();
+                appendMessage("Oops! I'm having trouble connecting right now.", 'assistant');
+            }
+        };
+
+        sendBtn.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+    }
 });

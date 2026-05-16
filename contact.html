@@ -187,6 +187,25 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <!-- AI Pet Assistant -->
+    <div id="ai-pet-container" class="ai-pet-container">
+        <dotlottie-wc src="https://lottie.host/e8059b7c-c592-4a2f-a374-cbbcae6c4edf/MWkYBZcVPu.lottie" stateMachineId="StateMachine1" style="width: 150px; height: 150px;" autoplay loop></dotlottie-wc>
+    </div>
+
+    <!-- Chat Window -->
+    <div id="ai-chat-window" class="ai-chat-window hidden">
+        <div class="chat-header">
+            <h3>Labony's AI Assistant</h3>
+            <button id="close-chat" class="close-btn">&times;</button>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+            <div class="message ai-message">Hi there! I'm Labony's virtual assistant. Ask me anything about her skills, projects, or experience!</div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask a question..." autocomplete="off">
+            <button id="send-btn" class="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
 </body>
 
 </html>
