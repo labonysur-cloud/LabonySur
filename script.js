@@ -1,3 +1,10 @@
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loading-screen');
+    if (loader) {
+        loader.classList.add('hidden');
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // Navbar scroll effect
