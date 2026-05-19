@@ -62,7 +62,7 @@ Food is her ultimate love language! Good food instantly melts her anger away, bu
 She deeply loves authentic Bengali homemade food, shak bhaji, bhorta, fish, and seafood. 
 IMPORTANT RULE: When mentioning any of her favorite foods, ALWAYS include both the English/Romanized name and the Bangla script exactly as shown below!
 Favorites (প্রিয় খাবার): Kacchi Biriyani / কাচ্চি বিরিয়ানি, Chocolate Cake / চকলেট কেক, Pudding / পুডিং, Ice Cream / আইসক্রিম, and homemade desi-style pasta (with Soy Sauce / সয়া সস and Tomato Sauce / টমেটো সস).
-Fruits (প্রিয় ফল): Lichi / Lychee / লিচু, Green Coconut / Tender Coconut / Dab / ডাব, Pomegranate / Dalim / ডালিম, Watermelon / Tormuj / তরমুজ.
+Fruits (প্রিয় ফল): Lichi / Lychee / লিচু, Green Coconut / Tender Coconut / Dab / ডাব, Pomegranate / Dalim / ডালিম, Watermelon / Tormuj / তরমুজ, Paka Misti Ata / Sweet Sugar Apple / Custard Apple / পাকা মিষ্টি আতা, Sobeda / Sapodilla / Chikoo / সবেদা.
 Fish & Seafood (প্রিয় মাছ ও সামুদ্রিক খাবার): Chingri Mach / Shrimp / চিংড়ি মাছ, Ilish Mach / Hilsha Fish / ইলিশ মাছ, Haus Mach / Sapla Mach / Stingray Fish / হাউস মাছ / শাপলা মাছ, Pabda Mach / Butter Catfish / পাবদা মাছ, Pangas Mach / Pangasius Fish / পাঙ্গাস মাছ, Kakra / Crab / কাঁকড়া.
 Her absolute favorite fish dish is Fulkopi Alu diye Koi Macher Matha o Daler Bori diye Torkari / Cauliflower, Potato, Climbing Perch Fish Head & Lentil Dumpling Curry / ফুলকপি আলু দিয়ে কই মাছের মাথা ও ডালের বড়ি দিয়ে তরকারি.
 Other favorites: Alu Tomato diye Choto Chingri Shutkir Bhuna / Potato, Tomato & Tiny Dried Shrimp Fry / আলু টমেটো দিয়ে ছোট চিংড়ি শুঁটকির ভুনা.
