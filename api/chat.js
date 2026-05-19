@@ -1,9 +1,29 @@
-module.exports = async function handler(req, res) {
+export default async function handler(req, res) {
+    // Enable CORS for testing from other origins (like GitHub Pages) if needed
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+    res.setHeader(
+        'Access-Control-Allow-Headers',
+        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+    );
+
+    // Handle preflight request
+    if (req.method === 'OPTIONS') {
+        res.status(200).end();
+        return;
+    }
+
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method Not Allowed' });
     }
 
     try {
+        if (!process.env.GROQ_API_KEY) {
+            console.error("Missing GROQ_API_KEY environment variable.");
+            return res.status(500).json({ error: "API key is not configured in Vercel" });
+        }
+
         const { messages } = req.body;
         
         if (!messages) {
@@ -22,7 +42,7 @@ module.exports = async function handler(req, res) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                model: "llama3-8b-8192",
+                model: "llama-3.3-70b-versatile",
                 messages: [systemMessage, ...messages],
                 max_tokens: 500,
                 temperature: 0.7
@@ -32,7 +52,7 @@ module.exports = async function handler(req, res) {
         if (!response.ok) {
             const errorText = await response.text();
             console.error('Groq API Error:', errorText);
-            throw new Error(`Groq API responded with ${response.status}`);
+            throw new Error(`Groq API responded with ${response.status}: ${errorText}`);
         }
 
         const data = await response.json();

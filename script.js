@@ -122,7 +122,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: JSON.stringify({ messages: messagesContext })
                 });
 
-                if (!response.ok) throw new Error('Network response was not ok');
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.error || 'Network response was not ok');
+                }
                 
                 const data = await response.json();
                 const aiResponse = data.choices[0].message.content;
@@ -134,7 +137,16 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (error) {
                 console.error("Chat error:", error);
                 hideTyping();
-                appendMessage("Oops! I'm having trouble connecting right now.", 'assistant');
+                
+                let errorMsg = "Oops! I'm having trouble connecting right now.";
+                
+                if (window.location.protocol === 'file:' || window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost') {
+                    errorMsg = "Oops! I can't connect while running locally. Please view this on your live Vercel deployment, or run 'vercel dev' locally!";
+                } else if (error.message && error.message.includes("API key")) {
+                    errorMsg = "Oops! The server is missing the Groq API key. Please add GROQ_API_KEY to your Vercel Environment Variables!";
+                }
+                
+                appendMessage(errorMsg, 'assistant');
             }
         };
 
