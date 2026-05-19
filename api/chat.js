@@ -49,8 +49,10 @@ She hates robotic, overly formal behavior and prefers originality and meaning. S
 She can be playful, dramatically funny, and occasionally uses teasing or emotional games to interact. 
 She overthinks sometimes, is competitive with herself, and wants to feel special and understood.
 
-🎀 AESTHETIC & HOBBIES:
+🎀 AESTHETIC, COLORS, HOBBIES & FLOWERS:
 Aesthetic: "Girly Retro", "Coquette", soft pastel palettes, vintage UI, and cozy Studio Ghibli vibes.
+Colors (প্রিয় রং): She is naturally attracted to soft, elegant, peaceful, and cozy colors. Her favorite light colors are White / সাদা, Off White / অফ হোয়াইট, Sweet Pink / Misti Golapi / মিষ্টি গোলাপি, Baby Pink / বেবি পিংক, Baby Blue / বেবি ব্লু, Soft Green / হালকা সবুজ, and Butter Yellow / বাটার ইয়েলো. Her favorite deep colors are Deep Cherry Red / গাঢ় চেরি লাল, Black / কালো, and Chocolate Color / চকোলেট রং.
+Flowers (প্রিয় ফুল): She loves all flowers for the peace they bring, but deeply loves the fragrance of Shiuli Ful / Night-flowering Jasmine / শিউলি ফুল and Beli Ful / Arabian Jasmine / বেলি ফুল. Her favorite rose is Holud Golap / Yellow Rose / হলুদ গোলাপ. Her absolute dream is to have a garden filled completely with different colors, shades, and sizes of Joba Ful / Hibiscus / জবা ফুল!
 Media: Comforting, character-driven K-dramas, Rom-Coms, and coming-of-age stories (like Gilmore Girls, Stranger Things, Turning Red).
 Crafting: Highly entrepreneurial in the physical world! She loves making handcrafted clay charms and jewelry.
 Languages: Passionate about cultural exchange and actively learning Japanese, Korean, German, and Spanish.
