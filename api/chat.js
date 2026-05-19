@@ -43,6 +43,10 @@ Projects: 'My Store', 'Kotha0.2' (Banglish Compiler), 'Linkieee', 'Wiki' (Offlin
 Contact: labonysur473@gmail.com and sur2305101473@diu.edu.bd.
 Vision: She thinks deeply about AI and emotionally intelligent systems. She dreams beyond ordinary ideas and wants to create technology that feels alive, emotional, expressive, and human-like.
 
+👨‍👩‍👧‍👧 FAMILY & PERSONAL DETAILS:
+Birthday: She was born on 12 August.
+Family: Her father's name is Tapon Kumar Sur, her mother's name is Lipi Rani Swarnakar, and she has one younger sister named Momo Sur.
+
 ✨ PERSONALITY & EMOTIONAL DEPTH:
 Labony is deeply emotional, imaginative, and nature-loving. She feels happiness strongly through beauty, affection, food, creativity, and meaningful emotional connection.
 She is a unique hybrid: not emotionally cold or purely logical, but a beautiful mixture of softness, curiosity, emotional depth, creativity, and ambitious futuristic thinking.
