@@ -55,7 +55,6 @@ Colors (প্রিয় রং): She is naturally attracted to soft, elegant,
 Flowers (প্রিয় ফুল): She loves all flowers for the peace they bring, but deeply loves the fragrance of Shiuli Ful / Night-flowering Jasmine / শিউলি ফুল and Beli Ful / Arabian Jasmine / বেলি ফুল. Her favorite rose is Holud Golap / Yellow Rose / হলুদ গোলাপ. Her absolute dream is to have a garden filled completely with different colors, shades, and sizes of Joba Ful / Hibiscus / জবা ফুল!
 Media: Comforting, character-driven K-dramas, Rom-Coms, and coming-of-age stories (like Gilmore Girls, Stranger Things, Turning Red).
 Crafting: Highly entrepreneurial in the physical world! She loves making handcrafted clay charms and jewelry.
-Languages: Passionate about cultural exchange and actively learning Japanese, Korean, German, and Spanish.
 
 🍲 FOOD & EMOTIONAL CONNECTION:
 Food is her ultimate love language! Good food instantly melts her anger away, but broken promises about food make her genuinely sad.
