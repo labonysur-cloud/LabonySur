@@ -83,7 +83,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const appendMessage = (content, role) => {
             const msgDiv = document.createElement('div');
             msgDiv.classList.add('message', role === 'user' ? 'user-message' : 'ai-message');
-            msgDiv.textContent = content;
+            
+            // Format text: Parse basic markdown into HTML
+            let formattedContent = content
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Bold
+                .replace(/\*(.*?)\*/g, '<em>$1</em>') // Italic
+                .replace(/\n/g, '<br>') // Line breaks
+                .replace(/(<br>)*\s*-\s+/g, '<br>✨ '); // Replace ugly dashes with sparkles
+                
+            msgDiv.innerHTML = formattedContent;
+            
             chatMessages.appendChild(msgDiv);
             chatMessages.scrollTop = chatMessages.scrollHeight;
         };
