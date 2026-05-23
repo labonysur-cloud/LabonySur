@@ -32,7 +32,7 @@ portfolio/
 ├── index.html              # Home page
 ├── about.html              # About me
 ├── education.html          # Educational background
-├── projects.html           # Project showcase (11 projects)
+├── projects.html           # Project showcase (10 projects)
 ├── certifications.html     # Certificates & achievements
 ├── activities.html         # Extracurricular activities
 ├── contact.html            # Contact information
@@ -58,7 +58,7 @@ Personal introduction highlighting my journey in AI/ML, compiler design, and sof
 - **Milestone College** - Higher Secondary Certificate (HSC)
 - **Milestone School & College** - Secondary School Certificate (SSC)
 
-### 💻 Projects (11 Total)
+### 💻 Projects (10 Total)
 
 **Academic & Course Projects:**
 - My Store E-Commerce Platform (MySQL, PHP, Security)
@@ -74,7 +74,6 @@ Personal introduction highlighting my journey in AI/ML, compiler design, and sof
 - Classic Snake Game (JavaScript)
 - Case011 - OSINT Investigation Platform (Wikipedia API)
 - Butterfly Timer (Electron Desktop App)
-- The Cat's Social (React, Next.js, Appwrite)
 
 ### 🏆 Certifications
 Display of professional certificates and achievements
@@ -131,7 +130,7 @@ This portfolio is designed to be deployed on GitHub Pages:
 
 ## 📊 Key Highlights
 
-- ✅ **11 Projects** spanning AI/ML, compilers, web dev, and games
+- ✅ **10 Projects** spanning AI/ML, compilers, web dev, and games
 - ✅ **3 Categories** of work (Academic, Engineering, Creative)
 - ✅ **100% Responsive** design
 - ✅ **Zero Dependencies** - pure vanilla code
@@ -145,7 +144,6 @@ All projects include live demos or GitHub repositories:
 - [Case011 Investigation Platform](https://labonysur-cloud.github.io/Case011/)
 - [Butterfly Timer](https://labonysur-cloud.github.io/Butterfly-Timer/)
 - [Kawaii Painter](https://labonysur-cloud.github.io/kawaii_art_genaretor/)
-- [The Cat's Social](https://labonysur-cloud.github.io/The_Cat-s_Social/)
 
 ## 📱 Connect With Me
 
