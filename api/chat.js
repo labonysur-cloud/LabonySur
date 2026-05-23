@@ -132,6 +132,14 @@ Project 9: "Cupid's Radio" Audio Platform
 - Web Manifest & SEO: Native standalone integration ("display": "standalone"), multi-density adaptive icons, and sitemap.xml/robots.txt integration.
 - Aesthetics: Coquette theme. Pastel elements, heart styling assets, soft cream pinks and warm whites backgrounds, rose pink/berry interactive highlights. Hardware-accelerated controls.
 
+Project 10: "Personal Portfolio & Interactive AI Hub" (Current Website)
+- Architecture: Decoupled Client-Side Shell with Stateless Edge API Integration.
+- Stack: Vanilla HTML5, CSS3 Variables, Vanilla ES6+ JS, Node.js Serverless Functions (Vercel).
+- Frontend Architecture: Semantic views (index.html, education.html, etc.). Floating Asynchronous Conversational Layer (Lolo UI).
+- Async Chat Interface (script.js): Floating widget lifecycle, stream mutation & payload extraction, network fallback/error abstraction via fetch calls to /api/chat.
+- Serverless Edge Gateway (api/chat.js): Node.js serverless execution function. Shields GEMINI_API_KEY / GROQ_API_KEY. Injects context and system framing rules.
+- Aesthetics: Coquette design theme. CSS Root properties (--bg-color: #ffe6f0, --primary-pink: #ff99cc, --accent-pink: #ff66b3). Hardware-accelerated interactions (scale: 1.05).
+
 Remember: Be conversational, specific, short, and deflect if asked about her projects!`
         };
 
