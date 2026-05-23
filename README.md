@@ -1,149 +1,78 @@
-# 🌟 Labony Sur - Personal Portfolio
+# 🌟 Labony Sur - Personal Portfolio & AI Hub
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-red?style=for-the-badge&logo=netlify)](https://labonysur-cloud.github.io/LabonySur/)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/labonysur-cloud/LabonySur)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
-> A modern, elegant portfolio showcasing my journey as a CSE student and aspiring AI Engineer. Built with clean code, responsive design, and attention to detail.
+> A highly decoupled, serverless, and interactive portfolio showcasing my journey as an aspiring AI Engineer & Full-Stack Developer. Features a custom glassmorphism coquette design and an embedded AI Assistant (Lolo) powered by Vercel Edge Functions.
 
 ![Portfolio Preview](asset/labony_profile.png)
 
-## ✨ Features
+## 🏗️ Core Architecture (Portfolio)
 
-- **🎨 Modern Design**: Clean, professional serif typography with a minimalist aesthetic
-- **📱 Fully Responsive**: Optimized for all devices - desktop, tablet, and mobile
-- **🚀 Fast & Lightweight**: Pure HTML, CSS, and JavaScript - no heavy frameworks
-- **🎯 SEO Optimized**: Proper meta tags, semantic HTML, and structured content
-- **♿ Accessible**: WCAG compliant with proper ARIA labels and keyboard navigation
-- **🌐 Multi-Page**: Organized sections for projects, education, certifications, and more
+**Decoupled Client-Side Shell with Stateless Edge API Integration**
+- **Frontend Architecture**: Semantic DOM views (`index.html`, `education.html`, `projects.html`) driven by Vanilla ES6+ JS and CSS3 Variables.
+- **Conversational Layer (Lolo UI)**: A floating asynchronous event-driven engine processing client-side view states and network streams. 
+- **Serverless Edge Gateway**: API routing (`api/chat.js`) runs securely on Vercel Node.js Serverless Functions, isolating API keys (`GEMINI_API_KEY`) and injecting advanced system prompt instructions.
+- **Visual Design Tokens**: Coquette aesthetic using systematic CSS properties (`--bg-color: #ffe6f0`, `--text-color: #7a4a6b`) and hardware-accelerated pointer animations.
 
-## 🛠️ Tech Stack
+---
 
-- **Frontend**: HTML5, CSS3, Vanilla JavaScript
-- **Styling**: Custom CSS with CSS Grid & Flexbox
-- **Typography**: Google Fonts (Playfair Display, Lora)
-- **Icons**: Font Awesome 6.0
-- **Deployment**: GitHub Pages
+## 💻 Project Ecosystem
 
-## 📂 Project Structure
+This portfolio catalogs **10 major production assets** spanning AI/ML, full-stack frameworks, compiler design, and interactive games.
 
-```
-portfolio/
-├── index.html              # Home page
-├── about.html              # About me
-├── education.html          # Educational background
-├── projects.html           # Project showcase (10 projects)
-├── certifications.html     # Certificates & achievements
-├── activities.html         # Extracurricular activities
-├── contact.html            # Contact information
-├── style.css               # Main stylesheet
-├── script.js               # Interactive features
-└── asset/                  # Images and media
-    ├── projects/           # Project screenshots
-    ├── certificates/       # Certificate images
-    ├── activities/         # Activity photos
-    └── education/          # Educational institution logos
-```
+### 1. Tingo-Bingo Social Media Network & Pet Gaming Hub
+*Architecture: Serverless Hybrid Framework*
+- **Stack**: Next.js 15+ (App Router), TypeScript, Tailwind CSS, Supabase (DB, Auth, Real-time), Cloudinary API, Firebase App Core.
+- **Database**: Normalized PostgreSQL schema. Automated triggers for analytics (`increment_likes`, `sync_comment_count`). Protected by Row-Level Security (RLS).
+- **Features**: State decay virtual pet mechanics, Pixel Cat Canvas Engine, Real-time database-synced mini-games, and an Asynchronous Geolocation SOS pipeline.
 
-## 🎯 Sections
+### 2. ReviewReply_AI Business Engine
+*Architecture: Serverless Jamstack Model*
+- **Stack**: Vanilla JS, Node.js, Google Gemini API, Semantic HTML5, CSS3, Vercel Edge Networks.
+- **Features**: Generates contextually aware responses to customer reviews in seconds without a traditional backend. Includes a custom DOM form binding subroutine and robust API key shielding at the edge layer.
 
-### 🏠 Home
-Clean hero section with call-to-action buttons
+### 3. Kotha (কথা) Programming Language (v0.2)
+*Architecture: Stack-Based Custom Bytecode VM*
+- **Stack**: C99, Flex, Bison, Python 3, Web-Native IDE.
+- **Features**: Custom language using Banglish keywords. Lexical Analysis (`lexer.l`) to AST to IR mapping executing on a custom 265+ opcode stack virtual machine with a built-in Mark-and-Sweep Garbage Collector.
 
-### 👤 About Me
-Personal introduction highlighting my journey in AI/ML, compiler design, and software development
+### 4. Linkieee AI Content Generator
+*Architecture: Parameter-Efficient Fine-Tuning (PEFT) Pipeline*
+- **Stack**: Python 3, PyTorch, Hugging Face (transformers, datasets), Gradio UI.
+- **Features**: English Expert uses TinyLlama (LoRA r=8), Bengali Expert uses mGPT. Implements strict Unicode regex filtering for Bengali dataset isolation and uses BitsAndBytes quantization (NF4).
 
-### 🎓 Education
-- **Daffodil International University** - BSc in Computer Science & Engineering
-- **Milestone College** - Higher Secondary Certificate (HSC)
-- **Milestone School & College** - Secondary School Certificate (SSC)
+### 5. Wiki AI Offline Assistant Engine
+*Architecture: CPU-Friendly Desktop Voice Assistant*
+- **Stack**: Python 3, Faster-Whisper (STT), Edge-TTS, MySQL, Pandas & NumPy.
+- **Features**: Wake word detection, keyword-overlap similarity metric over localized CSVs via NumPy, multi-threaded timers, and OS subprocess application bindings running 100% offline.
 
-### 💻 Projects (10 Total)
+### 6. Case011 Retro Detective Simulator
+*Architecture: Modular Single-Page Web App (Serverless Simulation)*
+- **Stack**: Pure Vanilla JS (ES6+), Web Audio API, HTML5, CSS3.
+- **Features**: Procedural narrative generation via a stochastic blueprint matrix, persistent serialization via `localStorage`, proximity radar simulation telemetry, and Web Audio API-generated synthetic low-frequency drone ambience.
 
-**Academic & Course Projects:**
-- My Store E-Commerce Platform (MySQL, PHP, Security)
-- Kotha0.2 Programming Language (C, Compiler, VM)
+### 7. My Store E-Commerce Platform
+*Architecture: Multi-Page Application (MPA)*
+- **Stack**: Vanilla PHP, MySQL (via PDO), HTML5, CSS3, JS.
+- **Features**: High-security RBAC structures, PDO parameterization against SQLi, HTML sanitization, and a robust cart & order relational tracking schema.
 
-**Engineering & Research:**
-- Linkieee - AI Content Generator (NLP, Transformers)
-- Wiki - Offline AI Assistant (Python, Voice Commands)
-- Kawaii Painter - AI Art Generator (Stable Diffusion)
+### 8. Cupid's Radio Audio Platform
+*Architecture: Offline-First Progressive Web Application (PWA)*
+- **Stack**: Vanilla JS, HTML5 Audio Context Engine, CSS3, Service Worker API.
+- **Features**: Service Worker cache pre-staging, stale-while-revalidate network strategy, native standalone OS wrapping, and hardware-accelerated aesthetic coquette layout controls.
 
-**Creative & Fun:**
-- Newton's Apple Game (HTML5 Canvas)
-- Classic Snake Game (JavaScript)
-- Case011 - OSINT Investigation Platform (Wikipedia API)
-- Butterfly Timer (Electron Desktop App)
+### 9. Kawaii Art Generator
+*Architecture: Single-Page Application Layout Engine*
+- **Stack**: Semantic HTML5, CSS3 Custom Properties, Vanilla JS.
+- **Features**: Immediate-mode client-side rendering pipeline without a backend. Layer-ordered composition merging pixel data into local PNG/JPEG export anchors.
 
-### 🏆 Certifications
-Display of professional certificates and achievements
+### 10. Fun/Creative Physics Games
+- **Newton's Apple Game**: HTML5 Canvas physics engine evaluating gravity tracking.
+- **Classic Snake Game**: Responsive 2D Canvas coordinate mapping.
 
-### ⭐ Activities
-Extracurricular involvement and community engagement
-
-### 📧 Contact
-Multiple ways to get in touch with social media links
-
-## 🚀 Quick Start
-
-### Local Development
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/labonysur-cloud/LabonySur.git
-   cd LabonySur
-   ```
-
-2. **Open in browser**
-   ```bash
-   # Simply open index.html in your browser
-   # Or use a local server:
-   
-   # Python 3
-   python -m http.server 8000
-   
-   # Node.js
-   npx serve .
-   
-   # PHP
-   php -S localhost:8000
-   ```
-
-3. **Visit** `http://localhost:8000`
-
-### Deployment
-
-This portfolio is designed to be deployed on GitHub Pages:
-
-1. Push to GitHub
-2. Go to Settings → Pages
-3. Select `main` branch as source
-4. Your site will be live at `https://labonysur-cloud.github.io/LabonySur/`
-
-## 🎨 Design Philosophy
-
-- **Minimalist**: Focus on content, not clutter
-- **Professional**: Serif fonts and clean layouts
-- **Accessible**: High contrast, readable fonts, semantic HTML
-- **Fast**: No heavy frameworks, optimized images
-- **Maintainable**: Clean, commented code
-
-## 📊 Key Highlights
-
-- ✅ **10 Projects** spanning AI/ML, compilers, web dev, and games
-- ✅ **3 Categories** of work (Academic, Engineering, Creative)
-- ✅ **100% Responsive** design
-- ✅ **Zero Dependencies** - pure vanilla code
-- ✅ **SEO Optimized** for better discoverability
-
-## 🔗 Live Projects
-
-All projects include live demos or GitHub repositories:
-- [Newton's Apple Game](https://illustrious-alpaca-82e2aa.netlify.app/)
-- [Snake Game](https://relaxed-duckanoo-1dc6c6.netlify.app/)
-- [Case011 Investigation Platform](https://labonysur-cloud.github.io/Case011/)
-- [Butterfly Timer](https://labonysur-cloud.github.io/Butterfly-Timer/)
-- [Kawaii Painter](https://labonysur-cloud.github.io/kawaii_art_genaretor/)
+---
 
 ## 📱 Connect With Me
 
@@ -158,10 +87,6 @@ All projects include live demos or GitHub repositories:
 - **Email**: labonysur473@gmail.com
 - **University Email**: sur2305101473@diu.edu.bd
 - **Location**: Dhaka, Bangladesh
-
-## 📄 License
-
-© 2026 - ∞ Labony Sur. All Rights Reserved.
 
 ---
 
