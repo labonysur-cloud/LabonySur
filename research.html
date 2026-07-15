@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research &amp; Publications | Labony Sur</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Research papers and academic publications by Labony Sur, including the BanglaVoice dataset paper on Bangla voice classification published in Elsevier Data in Brief (2026).">
+    <meta name="keywords"
+        content="Labony Sur, Research, Publications, BanglaVoice, NLP, Bangla Dataset, Voice Classification, Elsevier, Data in Brief, Machine Learning, AI Research">
+    <meta name="author" content="Labony Sur">
+    <link rel="canonical" href="https://labony-sur.vercel.app/research.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://labony-sur.vercel.app/research.html">
+    <meta property="og:title" content="Research &amp; Publications | Labony Sur">
+    <meta property="og:description"
+        content="Academic research papers by Labony Sur covering NLP datasets, AI engineering, and Bangla language processing.">
+    <meta property="og:image" content="https://labony-sur.vercel.app/asset/banglavoice_paper_preview.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://labony-sur.vercel.app/research.html">
+    <meta property="twitter:title" content="Research &amp; Publications | Labony Sur">
+    <meta property="twitter:description"
+        content="Academic research papers by Labony Sur covering NLP datasets, AI engineering, and Bangla language processing.">
+    <meta property="twitter:image" content="https://labony-sur.vercel.app/asset/banglavoice_paper_preview.png">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "name": "BanglaVoice: A Curated Sentence-Level Annotated Dataset for Active, Passive, and Middle Voice in Bangla with Baseline Classification Benchmarks",
+      "author": [
+        {"@type": "Person", "name": "Md. Jahidul Alam"},
+        {"@type": "Person", "name": "Zannatul Mawa Koli"},
+        {"@type": "Person", "name": "Labony Sur"},
+        {"@type": "Person", "name": "Zahara Al Zarin"},
+        {"@type": "Person", "name": "Most. Hasna Hena"},
+        {"@type": "Person", "name": "Tapasy Rabeya"}
+      ],
+      "isPartOf": {"@type": "Periodical", "name": "Data in Brief"},
+      "publisher": {"@type": "Organization", "name": "Elsevier"},
+      "datePublished": "2026",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352340926006268"
+    }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="asset/fabicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* Research page specific styles */
+
+        .paper-card {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            transition: var(--transition);
+        }
+
+        .paper-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-color: var(--color-primary);
+        }
+
+        .paper-preview-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 1px solid var(--color-border);
+            transition: transform 0.4s ease;
+        }
+
+        .paper-card:hover .paper-preview-img {
+            transform: scale(1.02);
+        }
+
+        .paper-img-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .paper-journal-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(255, 255, 255, 0.96);
+            border: 1px solid var(--color-border);
+            padding: 5px 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .paper-year-badge {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: var(--color-primary);
+            color: #fff;
+            padding: 5px 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+
+        .paper-body {
+            padding: 30px 35px;
+        }
+
+        .paper-body h2 {
+            font-size: 1.45rem;
+            line-height: 1.4;
+            color: var(--color-text);
+            margin-bottom: 18px;
+            font-family: var(--font-heading);
+        }
+
+        .paper-body h2 a {
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        .paper-body h2 a:hover {
+            color: var(--color-primary);
+        }
+
+        .paper-authors {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 22px;
+        }
+
+        .author-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 12px;
+            background: #f5f5f5;
+            border: 1px solid var(--color-border);
+            font-size: 0.82rem;
+            color: var(--color-text);
+            transition: var(--transition);
+        }
+
+        .author-chip.me {
+            background: rgba(215, 20, 20, 0.06);
+            border-color: rgba(215, 20, 20, 0.3);
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+
+        .author-chip i {
+            font-size: 0.65rem;
+        }
+
+        .paper-meta-row {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 22px;
+            flex-wrap: wrap;
+        }
+
+        .paper-meta-item {
+            font-size: 0.88rem;
+            color: var(--color-text-light);
+        }
+
+        .paper-meta-item strong {
+            color: var(--color-text);
+        }
+
+        .paper-abstract {
+            font-size: 0.97rem;
+            line-height: 1.8;
+            color: var(--color-text-light);
+            margin-bottom: 28px;
+            border-left: 3px solid var(--color-primary);
+            padding-left: 18px;
+        }
+
+        .my-contributions {
+            background: #fff5f5;
+            border: 1px solid rgba(215, 20, 20, 0.15);
+            padding: 16px 20px;
+            margin-bottom: 28px;
+        }
+
+        .my-contributions h4 {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-primary);
+            margin-bottom: 12px;
+            font-family: var(--font-heading);
+        }
+
+        .contributions-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .contrib-tag {
+            background: rgba(215, 20, 20, 0.08);
+            border: 1px solid rgba(215, 20, 20, 0.2);
+            color: var(--color-primary);
+            padding: 4px 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .paper-stats-strip {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 1px;
+            background: var(--color-border);
+            border: 1px solid var(--color-border);
+            margin-bottom: 28px;
+        }
+
+        .pstat {
+            background: #fafafa;
+            padding: 14px 16px;
+            text-align: center;
+            transition: background 0.2s;
+        }
+
+        .pstat:hover {
+            background: #fff5f5;
+        }
+
+        .pstat-val {
+            font-size: 1.25rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            color: var(--color-text);
+            display: block;
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
+
+        .pstat-val.highlight {
+            color: var(--color-primary);
+        }
+
+        .pstat-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--color-text-light);
+            letter-spacing: 0.05em;
+        }
+
+        .class-distribution {
+            margin-bottom: 28px;
+        }
+
+        .class-distribution h4 {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-light);
+            margin-bottom: 14px;
+        }
+
+        .dist-bar-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .dist-bar-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .dist-bar-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            width: 60px;
+            flex-shrink: 0;
+        }
+
+        .dist-bar-track {
+            flex: 1;
+            height: 6px;
+            background: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .dist-bar-fill {
+            height: 100%;
+            transition: width 1s ease;
+        }
+
+        .dist-bar-fill.active-class  { background: #3b82f6; }
+        .dist-bar-fill.passive-class { background: var(--color-primary); }
+        .dist-bar-fill.middle-class  { background: #2d7a4f; }
+
+        .dist-bar-pct {
+            font-size: 0.82rem;
+            font-weight: 700;
+            width: 48px;
+            text-align: right;
+            flex-shrink: 0;
+            color: var(--color-text-light);
+        }
+
+        .paper-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 28px;
+        }
+
+        .paper-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .paper-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 22px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: 1px solid var(--color-primary);
+            transition: var(--transition);
+            cursor: pointer;
+            font-family: var(--font-heading);
+        }
+
+        .paper-btn-primary {
+            background: var(--color-primary);
+            color: #fff;
+        }
+
+        .paper-btn-primary:hover {
+            background: var(--color-primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(215, 20, 20, 0.3);
+        }
+
+        .paper-btn-secondary {
+            background: transparent;
+            color: var(--color-primary);
+        }
+
+        .paper-btn-secondary:hover {
+            background: #fff0f0;
+            transform: translateY(-2px);
+        }
+
+        .paper-btn-ghost {
+            background: transparent;
+            color: var(--color-text);
+            border-color: var(--color-border);
+        }
+
+        .paper-btn-ghost:hover {
+            background: var(--color-text);
+            color: #fff;
+            border-color: var(--color-text);
+            transform: translateY(-2px);
+        }
+
+        .model-table-section {
+            padding: 0 35px 30px;
+        }
+
+        .model-table-section h4 {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-light);
+            margin-bottom: 14px;
+            border-left: 3px solid var(--color-primary);
+            padding-left: 10px;
+        }
+
+        .perf-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.87rem;
+        }
+
+        .perf-table th {
+            background: var(--color-text);
+            color: #fff;
+            padding: 10px 14px;
+            text-align: left;
+            font-family: var(--font-heading);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .perf-table td {
+            padding: 9px 14px;
+            border-bottom: 1px solid #f0f0f0;
+            color: var(--color-text);
+        }
+
+        .perf-table tr:nth-child(even) td {
+            background: #fafafa;
+        }
+
+        .perf-table tr:first-child td {
+            background: rgba(215, 20, 20, 0.04);
+            font-weight: 700;
+        }
+
+        .perf-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            border: 1px solid transparent;
+        }
+
+        .perf-badge.top {
+            background: rgba(215, 20, 20, 0.08);
+            color: var(--color-primary);
+            border-color: rgba(215, 20, 20, 0.2);
+        }
+
+        .perf-badge.good {
+            background: rgba(59, 130, 246, 0.08);
+            color: #2563eb;
+            border-color: rgba(59, 130, 246, 0.2);
+        }
+
+        .perf-badge.ok {
+            background: #f5f5f5;
+            color: #777;
+            border-color: var(--color-border);
+        }
+
+        .citation-section {
+            background: #f8f8f8;
+            border-top: 1px solid var(--color-border);
+            padding: 22px 35px;
+        }
+
+        .citation-toggle-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: none;
+            border: none;
+            font-family: var(--font-body);
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--color-text-light);
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 0;
+            transition: color 0.2s;
+        }
+
+        .citation-toggle-btn:hover {
+            color: var(--color-primary);
+        }
+
+        .citation-box {
+            display: none;
+            margin-top: 16px;
+            background: #1e1e1e;
+            padding: 20px 24px;
+            position: relative;
+        }
+
+        .citation-box.open {
+            display: block;
+        }
+
+        .citation-text {
+            font-family: 'Courier New', monospace;
+            font-size: 0.82rem;
+            color: #d4d4d4;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .citation-text .cite-key { color: #9cdcfe; }
+        .citation-text .cite-val { color: #ce9178; }
+        .citation-text .cite-label { color: #4ec9b0; }
+
+        .copy-cite-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #fff;
+            padding: 5px 12px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: var(--font-body);
+        }
+
+        .copy-cite-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .coming-soon-card {
+            border: 1px dashed var(--color-border);
+            padding: 60px 40px;
+            text-align: center;
+            color: var(--color-text-light);
+            transition: var(--transition);
+            margin-top: 40px;
+        }
+
+        .coming-soon-card:hover {
+            border-color: var(--color-primary);
+        }
+
+        .coming-soon-card i {
+            font-size: 2.5rem;
+            color: var(--color-border);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .coming-soon-card h3 {
+            font-size: 1.3rem;
+            color: var(--color-text);
+            margin-bottom: 10px;
+        }
+
+        .coming-soon-card p {
+            font-size: 0.95rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .research-stats-bar {
+            display: flex;
+            gap: 0;
+            border: 1px solid var(--color-border);
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .rstat {
+            flex: 1;
+            min-width: 120px;
+            padding: 18px 20px;
+            border-right: 1px solid var(--color-border);
+            text-align: center;
+        }
+
+        .rstat:last-child {
+            border-right: none;
+        }
+
+        .rstat-num {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            display: block;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        .rstat-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--color-text-light);
+        }
+
+        @media (max-width: 768px) {
+            .paper-body { padding: 22px 18px; }
+            .citation-section { padding: 18px 18px; }
+            .model-table-section { padding: 0 18px 22px; }
+            .paper-stats-strip { grid-template-columns: repeat(2, 1fr); }
+            .perf-table { font-size: 0.78rem; }
+            .perf-table th, .perf-table td { padding: 7px 8px; }
+            .research-stats-bar { flex-direction: column; }
+            .rstat { border-right: none; border-bottom: 1px solid var(--color-border); }
+            .rstat:last-child { border-bottom: none; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js" type="module"></script>
+        <dotlottie-wc src="https://lottie.host/1c8afd84-988a-43c5-9c5a-47979ea773ff/ZPjI92xAHr.lottie" style="width: 300px;height: 300px" autoplay loop></dotlottie-wc>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Labony Sur.</div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <li><a href="projects.html"><i class="fas fa-laptop-code"></i> Projects</a></li>
+            <li><a href="research.html" class="active"><i class="fas fa-flask"></i> Research</a></li>
+            <li><a href="certifications.html"><i class="fas fa-certificate"></i> Certifications</a></li>
+            <li><a href="activities.html"><i class="fas fa-star"></i> Activities</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="section-container page-header">
+        <div class="section-title">
+            <h2>Research &amp; Publications</h2>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content-wrapper">
+
+        <!-- Stats overview bar -->
+        <div class="research-stats-bar">
+            <div class="rstat">
+                <span class="rstat-num">1</span>
+                <span class="rstat-label">Published Paper</span>
+            </div>
+            <div class="rstat">
+                <span class="rstat-num">4,397</span>
+                <span class="rstat-label">Dataset Sentences</span>
+            </div>
+            <div class="rstat">
+                <span class="rstat-num">0.955</span>
+                <span class="rstat-label">Fleiss' Kappa</span>
+            </div>
+            <div class="rstat">
+                <span class="rstat-num">93.1%</span>
+                <span class="rstat-label">Best F1-Score</span>
+            </div>
+            <div class="rstat">
+                <span class="rstat-num">Elsevier</span>
+                <span class="rstat-label">Publisher</span>
+            </div>
+        </div>
+
+        <!-- Section Header -->
+        <h3 class="category-header">Journal Articles</h3>
+
+        <!-- Paper 1: BanglaVoice -->
+        <article class="paper-card" id="banglavoice-paper">
+
+            <!-- Preview Image -->
+            <div class="paper-img-wrapper">
+                <img src="asset/banglavoice_paper_preview.png"
+                     alt="BanglaVoice paper preview - a Bangla NLP dataset for grammatical voice classification"
+                     class="paper-preview-img">
+                <span class="paper-journal-badge">
+                    <i class="fas fa-book-open"></i> Data in Brief &middot; Elsevier
+                </span>
+                <span class="paper-year-badge">2026</span>
+            </div>
+
+            <!-- Paper Body -->
+            <div class="paper-body">
+
+                <h2>
+                    <a href="https://www.sciencedirect.com/science/article/pii/S2352340926006268?via%3Dihub"
+                       target="_blank" rel="noopener noreferrer">
+                        BanglaVoice: A Curated Sentence-Level Annotated Dataset for Active, Passive, and Middle Voice in Bangla with Baseline Classification Benchmarks
+                    </a>
+                </h2>
+
+                <!-- Meta row -->
+                <div class="paper-meta-row">
+                    <span class="paper-meta-item"><strong>Journal:</strong> Data in Brief</span>
+                    <span class="paper-meta-item"><strong>Publisher:</strong> Elsevier</span>
+                    <span class="paper-meta-item"><strong>Year:</strong> 2026</span>
+                    <span class="paper-meta-item"><strong>Status:</strong> Journal Pre-proof</span>
+                </div>
+
+                <!-- Authors -->
+                <div class="paper-authors">
+                    <span class="author-chip">Md. Jahidul Alam</span>
+                    <span class="author-chip">Zannatul Mawa Koli</span>
+                    <span class="author-chip me"><i class="fas fa-star"></i> Labony Sur</span>
+                    <span class="author-chip">Zahara Al Zarin</span>
+                    <span class="author-chip">Most. Hasna Hena</span>
+                    <span class="author-chip">Tapasy Rabeya</span>
+                </div>
+
+                <!-- Abstract -->
+                <p class="paper-abstract">
+                    BanglaVoice is a curated, sentence-level annotated corpus of <strong>4,397 unique Bangla sentences</strong> spanning three grammatical voice categories (Active, Passive, and Middle), designed to advance Bangla NLP research. Data was sourced from major public portals (Prothom Alo, Kishor Alo, Sachalayatan, Kobitaclub) spanning 2023 to 2025. An independent 3-annotator labeling process with majority-voting achieved an exceptional inter-annotator agreement of <strong>Fleiss' kappa = 0.955</strong>. Character-level TF-IDF features (3 to 5 gram) fed into baseline classifiers, with LinearSVC achieving a top F1-score of <strong>93.1%</strong> and AUC of 0.989, demonstrating near-human classification performance.
+                </p>
+
+                <!-- My Contributions -->
+                <div class="my-contributions">
+                    <h4>Labony Sur's Contributions</h4>
+                    <div class="contributions-list">
+                        <span class="contrib-tag">Data Curation</span>
+                        <span class="contrib-tag">Annotation</span>
+                        <span class="contrib-tag">Validation</span>
+                        <span class="contrib-tag">Writing - Review &amp; Editing</span>
+                    </div>
+                </div>
+
+                <!-- Key Stats -->
+                <div class="paper-stats-strip">
+                    <div class="pstat">
+                        <span class="pstat-val highlight">4,397</span>
+                        <span class="pstat-label">Total Sentences</span>
+                    </div>
+                    <div class="pstat">
+                        <span class="pstat-val">k = 0.955</span>
+                        <span class="pstat-label">Fleiss' Kappa</span>
+                    </div>
+                    <div class="pstat">
+                        <span class="pstat-val highlight">93.1%</span>
+                        <span class="pstat-label">Best F1-Score</span>
+                    </div>
+                    <div class="pstat">
+                        <span class="pstat-val">3,234</span>
+                        <span class="pstat-label">Unique Tokens</span>
+                    </div>
+                    <div class="pstat">
+                        <span class="pstat-val">0.989</span>
+                        <span class="pstat-label">AUC (micro-avg)</span>
+                    </div>
+                    <div class="pstat">
+                        <span class="pstat-val highlight">Open</span>
+                        <span class="pstat-label">Access Dataset</span>
+                    </div>
+                </div>
+
+                <!-- Class Distribution -->
+                <div class="class-distribution">
+                    <h4>Dataset Class Distribution</h4>
+                    <div class="dist-bar-group">
+                        <div class="dist-bar-row">
+                            <span class="dist-bar-label" style="color:#2563eb;">Active</span>
+                            <div class="dist-bar-track">
+                                <div class="dist-bar-fill active-class" style="width:33.19%"></div>
+                            </div>
+                            <span class="dist-bar-pct">33.19%</span>
+                        </div>
+                        <div class="dist-bar-row">
+                            <span class="dist-bar-label" style="color:var(--color-primary);">Passive</span>
+                            <div class="dist-bar-track">
+                                <div class="dist-bar-fill passive-class" style="width:34.82%"></div>
+                            </div>
+                            <span class="dist-bar-pct">34.82%</span>
+                        </div>
+                        <div class="dist-bar-row">
+                            <span class="dist-bar-label" style="color:#2d7a4f;">Middle</span>
+                            <div class="dist-bar-track">
+                                <div class="dist-bar-fill middle-class" style="width:31.99%"></div>
+                            </div>
+                            <span class="dist-bar-pct">31.99%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tags -->
+                <div class="paper-tags">
+                    <span class="tag">NLP</span>
+                    <span class="tag">Bangla</span>
+                    <span class="tag">Dataset</span>
+                    <span class="tag">Voice Classification</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">TF-IDF</span>
+                    <span class="tag">LinearSVC</span>
+                    <span class="tag">Annotation</span>
+                    <span class="tag">Elsevier</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="paper-actions">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S2352340926006268?via%3Dihub"
+                       target="_blank" rel="noopener noreferrer"
+                       class="btn btn-primary paper-btn paper-btn-primary">
+                        <i class="fas fa-external-link-alt"></i> Read Full Paper
+                    </a>
+                    <a href="https://data.mendeley.com/datasets/ts6547j6sc/2"
+                       target="_blank" rel="noopener noreferrer"
+                       class="paper-btn paper-btn-secondary">
+                        <i class="fas fa-database"></i> Dataset (Mendeley)
+                    </a>
+                    <button class="paper-btn paper-btn-ghost" id="cite-toggle-btn">
+                        <i class="fas fa-quote-left"></i> Cite
+                    </button>
+                </div>
+            </div>
+
+            <!-- Model Performance Table -->
+            <div class="model-table-section">
+                <h4>Baseline Model Benchmark Results</h4>
+                <div style="overflow-x:auto;">
+                    <table class="perf-table">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Accuracy</th>
+                                <th>Precision</th>
+                                <th>Recall</th>
+                                <th>F1-Score</th>
+                                <th>AUC</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>LinearSVC (Top)</td>
+                                <td><span class="perf-badge top">93.18%</span></td>
+                                <td>93.11%</td>
+                                <td>93.14%</td>
+                                <td><span class="perf-badge top">93.10%</span></td>
+                                <td>0.989</td>
+                            </tr>
+                            <tr>
+                                <td>Ridge Classifier</td>
+                                <td><span class="perf-badge good">92.84%</span></td>
+                                <td>92.76%</td>
+                                <td>92.78%</td>
+                                <td><span class="perf-badge good">92.75%</span></td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>SGD (log loss)</td>
+                                <td><span class="perf-badge good">91.70%</span></td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                                <td><span class="perf-badge good">91.55%</span></td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Logistic Regression</td>
+                                <td><span class="perf-badge ok">91.48%</span></td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                                <td><span class="perf-badge ok">91.30%</span></td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Complement Naive Bayes</td>
+                                <td><span class="perf-badge ok">86.70%</span></td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                                <td><span class="perf-badge ok">86.13%</span></td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Multinomial Naive Bayes</td>
+                                <td><span class="perf-badge ok">86.36%</span></td>
+                                <td>N/A</td>
+                                <td>N/A</td>
+                                <td><span class="perf-badge ok">85.91%</span></td>
+                                <td>N/A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Citation Box -->
+            <div class="citation-section">
+                <button class="citation-toggle-btn" id="cite-toggle-btn-2">
+                    <i class="fas fa-code"></i> Cite this paper
+                    <i class="fas fa-chevron-down" id="cite-chevron" style="transition:transform 0.2s;"></i>
+                </button>
+                <div class="citation-box" id="citation-box">
+                    <button class="copy-cite-btn" id="copy-cite-btn"><i class="fas fa-copy"></i> Copy</button>
+                    <pre class="citation-text"><span class="cite-label">@article</span>{banglavoice2026,
+  <span class="cite-key">title</span>     = {<span class="cite-val">BanglaVoice: A Curated Sentence-Level Annotated Dataset
+              for Active, Passive, and Middle Voice in Bangla
+              with Baseline Classification Benchmarks</span>},
+  <span class="cite-key">author</span>    = {<span class="cite-val">Alam, Md. Jahidul and Koli, Zannatul Mawa
+              and Sur, Labony and Zarin, Zahara Al
+              and Hena, Most. Hasna and Rabeya, Tapasy</span>},
+  <span class="cite-key">journal</span>   = {<span class="cite-val">Data in Brief</span>},
+  <span class="cite-key">year</span>      = {<span class="cite-val">2026</span>},
+  <span class="cite-key">publisher</span> = {<span class="cite-val">Elsevier</span>},
+  <span class="cite-key">url</span>       = {<span class="cite-val">https://www.sciencedirect.com/science/article/pii/S2352340926006268</span>},
+  <span class="cite-key">note</span>      = {<span class="cite-val">Dataset: Mendeley Data, DOI: 10.17632/ts6547j6sc.2</span>}
+}</pre>
+                </div>
+            </div>
+
+        </article>
+        <!-- /Paper 1 -->
+
+        <!-- Coming Soon -->
+        <div class="coming-soon-card">
+            <i class="fas fa-flask"></i>
+            <h3>More Research Incoming</h3>
+            <p>Additional papers in Bangla NLP, AI Engineering, and computational linguistics are currently in progress.</p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Labony Sur.</h3>
+                <p>Bridging the gap between academic theory and intelligent systems. Dedicated to innovation through
+                    logic &amp; design.</p>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/labony-sur" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/labonysur-cloud" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com/@labony_sur" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61576985886759&sk=grid" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/labony.sur/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <div class="footer-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>sur2305101473@diu.edu.bd</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>labonysur473@gmail.com</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Dhaka, Bangladesh</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 - &#8734; Labony Sur. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- AI Pet Assistant -->
+    <div id="ai-pet-container" class="ai-pet-container">
+        <dotlottie-wc src="https://lottie.host/e8059b7c-c592-4a2f-a374-cbbcae6c4edf/MWkYBZcVPu.lottie" stateMachineId="StateMachine1" style="width: 150px; height: 150px;" autoplay loop></dotlottie-wc>
+    </div>
+
+    <!-- Chat Window -->
+    <div id="ai-chat-window" class="ai-chat-window hidden">
+        <div class="chat-header">
+            <h3>Lolo - AI Assistant</h3>
+            <button id="close-chat" class="close-btn">&times;</button>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+            <div class="message ai-message">Hi there! I'm Lolo, Labony's virtual pet assistant. Ask me anything about her skills, projects, or research!</div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask a question..." autocomplete="off">
+            <button id="send-btn" class="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script>
+        // Citation toggle
+        const citeBtn1 = document.getElementById('cite-toggle-btn');
+        const citeBtn2 = document.getElementById('cite-toggle-btn-2');
+        const citationBox = document.getElementById('citation-box');
+        const citeChevron = document.getElementById('cite-chevron');
+
+        function toggleCite() {
+            citationBox.classList.toggle('open');
+            citeChevron.style.transform = citationBox.classList.contains('open') ? 'rotate(180deg)' : '';
+        }
+
+        if (citeBtn1) citeBtn1.addEventListener('click', toggleCite);
+        if (citeBtn2) citeBtn2.addEventListener('click', toggleCite);
+
+        // Copy citation
+        const copyCiteBtn = document.getElementById('copy-cite-btn');
+        if (copyCiteBtn) {
+            copyCiteBtn.addEventListener('click', () => {
+                const text = document.querySelector('.citation-text').innerText;
+                navigator.clipboard.writeText(text).then(() => {
+                    copyCiteBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    setTimeout(() => { copyCiteBtn.innerHTML = '<i class="fas fa-copy"></i> Copy'; }, 2000);
+                });
+            });
+        }
+    </script>
+
+</body>
+
+</html>

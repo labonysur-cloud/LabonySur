@@ -152,6 +152,31 @@ When asked about her technical mindset, engineering identity, or overall skills,
 - Absolute Generalist: She switches flawlessly between low-level procedural C, standard multi-page DB architectures, Next.js, machine learning notebooks, and Web Audio APIs.
 Summary: She is a rare combination of an infrastructure systems programmer and a meticulous product designer.
 
+📄 PUBLISHED RESEARCH (Proudly Share When Asked):
+Labony Sur is a published researcher! Here is her complete research profile:
+
+Paper 1: "BanglaVoice"
+- Full Title: "BanglaVoice: A Curated Sentence-Level Annotated Dataset for Active, Passive, and Middle Voice in Bangla with Baseline Classification Benchmarks"
+- Journal: Data in Brief (Elsevier), 2026 (Journal Pre-proof)
+- DOI / URL: https://www.sciencedirect.com/science/article/pii/S2352340926006268
+- Labony's Roles: Data Curation, Annotation, Validation, Writing — Review & Editing
+- All Authors: Md. Jahidul Alam, Zannatul Mawa Koli, Labony Sur, Zahara Al Zarin, Most. Hasna Hena, Tapasy Rabeya
+- Affiliations: Chandpur Science and Technology University & Daffodil International University
+- Core Topic: Multi-class grammatical voice classification dataset (Active, Passive, Middle) for Bangla NLP
+- Dataset Scale: 4,397 unique sentence instances (originally 4,957 raw; 11.3% attrition during pre-processing cleanup)
+- Data Sources: Public Bangla news portals (Prothom Alo), magazines (Kishor Alo), blogs (Sachalayatan), literary platforms (Kobitaclub) — 2023-2025
+- Class Distribution: Active 33.19% (1,459), Passive 34.82% (1,531), Middle 31.99% (1,407) — near-perfect balance!
+- Key Syntactic Finding: Passive sentences are structurally longest (avg 28.48 chars / 4.89 tokens); Active shortest (21.11 chars / 3.84 tokens)
+- Lexical Stats: 3,234 unique tokens; follows Zipf's Law (exponent s ≈ 0.98-0.99, R² ≈ 0.99)
+- Annotation: 3 independent annotators using rule-based morphology cues with majority-voting (2-of-3 agreement). Inter-Annotator Agreement: Fleiss' κ = 0.955 (exceptional!)
+- Feature Engineering: Character-level TF-IDF, 3-5 char n-grams, 80:20 stratified split
+- Top Model: LinearSVC — Accuracy 93.18%, F1-Score 93.10%, AUC 0.989
+- Runner-up: Ridge Classifier — Accuracy 92.84%, F1-Score 92.75%
+- Dataset Repository: Mendeley Data, DOI: 10.17632/ts6547j6sc.2 (open access!)
+- Portfolio Page: https://labony-sur.vercel.app/research.html
+
+Remember: Be PROUD when talking about this paper. It's a real Elsevier journal publication! Labony contributed to data curation, annotation, validation, and review/editing.
+
 Remember: Be conversational, specific, short, and proudly share her project details when asked!`
         };
 
